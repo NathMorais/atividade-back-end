@@ -1,0 +1,39 @@
+/* Estilos gerais da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #7087b3; /* Cor de fundo da página */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Estilo do container */
+.container {
+    text-align: center;
+    background-color: #e90d8d50; /* Cor de fundo do container */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo do título */
+h1 {
+    color: #333;
+}
+
+/* Estilo da imagem */
+.imagem {
+    width: 300px; /* Ajuste o tamanho da imagem */
+    height: auto;
+    border-radius: 10px; /* Deixa a imagem com bordas arredondadas */
+    margin-top: 20px;
+}
+
+/* Responsividade - ajuste da imagem em telas menores */
+@media (max-width: 600px) {
+    .imagem {
+        width: 100%; /* Faz a imagem ocupar toda a largura da tela em dispositivos móveis */
+    }
+}
