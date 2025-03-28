@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Quizz de HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        .quiz-container {
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #e93333;
+            border-radius: 20px;
+            box-shadow: 2px 2px 10px rgba(188, 180, 180, 0.1);
+        }
+        .question {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .options label {
+            display: block;
+            margin: 5px 0;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #result {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="quiz-container">
+        <h2>Quiz HTML</h2>
+        <form id="quiz-form">
+            <!-- Pergunta 1 -->
+            <div class="question">1. QUAL É A FUNÇÃO DA TAG "H1"?</div>
+            <div class="options">
+               
+                <label><input type="radio" name="q1" value="Exibir uma imagem">b)Exibir uma imagem</label>
+                <label><input type="radio" name="q1" value="Adicionar uma linha horizontal"> c) Adicionar uma linha horizontal</label>
+                <label><input type="radio" name="q1" value="Criar um título de nível 1"> d)Criar um título de nível 1</label>
+                
+            </div>
+            <!-- Pergunta 2 -->
+            <div class="question">2."Qual tag é usada para criar um link em HTML?"?</div>
+                
+            <div class="options">
+               
+                <label><input type="radio" name="q2" value="a"> b) a </label>
+                <label><input type="radio" name="q2" value="href">c) href</label>
+                <label><input type="radio" name="q2" value="ul">d) ul</label>
+            </div>
+            <!-- Pergunta 3 -->
+            <div class="question">3. Qual propriedade do CSS é usada para alterar a cor do texto??</div>
+            <div class="options">
+                <label><input type="radio" name="q3" value=" background-color "> a) background-color </label>
+                <label><input type="radio" name="q3" value="font-style"> b) font-style</label>
+                <label><input type="radio" name="q3" value=" color"> d) color</label>
+                    
+            </div>
+ <!-- Pergunta 4 -->
+            <div class="question">4.  Qual código altera a cor de fundo de uma página para azul?</div>  
+            <div class="options">
+                <label><input type="radio" name="q4" value="background-color:red;"> a) background-color: red;</label>
+                <label><input type="radio" name="q4" value="background-color: blue; "> C) background-color: blue;</label>
+                <label><input type="radio" name="q4" value=" text-color: blue;"> d) text-color: blue;</label>
+                
+            </div>
+            <!-- Pergunta 5 -->
+            <div class="question">5.Qual código CSS torna um parágrafo centralizado na página?  </div>
+            <div class="options">
+            
+                <label><input type="radio" name="q5" value="text-align: middle;">b) text-align: middle;</label>
+                <label><input type="radio" name="q5" value="text-align: center;">c) text-align: center;</label>
+                <label><input type="radio" name="q5" value="align-text: center;">d) align-text: center;</label>
+                    
+            </div>
+
+            <button type="button" onclick="verificarRespostas()">Enviar</button>
+        </form>
+
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function verificarRespostas() {
+            let respostasCorretas = {
+                q1: "Criar um título de nível 1",
+                q2: "href",
+                q3: "color",
+                q4: "background-color- blue",
+                q5: "tex-align: center",
+            }
+
+            let pontuacao = 0;
+
+            // Verifica respostas
+            let form = document.getElementById("quiz-form");
+            let resposta1 = form.q1.value;
+            let resposta2 = form.q2.value;
+            let resposta3 = form.q3.value;
+            let resposta4 = form.q4.value;
+            let resposta5 = form.q5.value;
+
+            if (resposta1 === respostasCorretas.q1) pontuacao++;
+            if (resposta2 === respostasCorretas.q2) pontuacao++;
+            if (resposta3 === respostasCorretas.q3) pontuacao++;
+            if (resposta4 === respostasCorretas.q4) pontuacao++;
+            if (resposta5 === respostasCorretas.q5) pontuacao++;
+
+            // Mostra resultado
+            document.getElementById("result").innerText = `Você acertou ${pontuacao} de 5 perguntas!`;
+        }
+    </script>
+
+</body>
+</html>
