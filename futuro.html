@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quizz de html</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                text-align: center;
+                margin: 20px;
+            }
+            .quiz-container {
+                max-width: 500px;
+                margin: auto;
+                padding: 20px;
+                border: 1px solid #e93333;
+                border-radius: 20px;
+                box-shadow: 2px 2px 10px rgba(188, 180, 180, 0.1);
+            }
+            .question {
+                font-size: 18px;
+                margin-bottom: 10px;
+            }
+            .options label {
+            display: block;
+            margin: 5px 0;
+            }
+            button {
+                margin-top: 10px;
+                padding: 10px;
+                font-size: 16px;
+                cursor: pointer;
+            }
+            #result {
+                margin-top: 15px;
+                font-weight: bold;
+            }
+        </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <h2>QUIZ HTML</h2>
+        <form id="quiz-form">
+        <!-- Pergunta 1 -->
+        <div class="question">1.O QUE PROVAVELMENTE ACONTECERÁ COM OS CARROS DO FUTURO?</div>
+        <div class="options">
+        <label><input type="radio" name="q1" value=" Eles vão desaparecer e todos usaremos cavalo.">A) Eles vão desaparecer e todos usaremos cavalo.</label>
+        <label><input type="radio" name="q1" value="Usaremos carro voadores sempre"> B) Usaremos carro voadores sempre.</label>
+        <label><input type="radio" name="q1" value="Usaremos carro elétricos e autônomos"> C) Usaremos carro elétricos e autônomos.</label>
+
+            </div>
+             <!-- Pergunta 2 --> 
+             <div class="question">2.O QUE PODE ACONTECER COM O USO DA INTERNET?</div>
+             <div class="options">
+            <label><input type="radio" name="q2" value=" A internet ficará mais rápida e acessível para todos"> A)  A internet ficará mais rápida e acessível para todos.</label>
+           <label><input type="radio" name="q2" value="A internet será completamente proibida.">B) A internet será completamente proibida.</label>
+            <label><input type="radio" name="q2" value="As pessoas voltarão a usar carta">C) As pessoas voltarão a usar carta.</label>
+
+    </div>
+    <!-- Pergunta 3 -->
+    <div class="question">3. COMO A TECNOLOGIA DEVE IMPACTAR A MEDICINA?</div>
+    <div class="options">
+    <label><input type="radio" name="q3" value=" Novos tratamentos e avanços"> A) Novos tratamentos e avanços. </label>
+     <label><input type="radio" name="q3" value="A medicina não evoluirá">
+        B) A medicina não evoluirá.</label>
+    <label><input type="radio" name="q3" value="Os médicos serão substituídos por curandeiros"> C) Os médicos serão substituídos por curandeiros.</label>
+
+    </div>
+     <!-- Pergunta 4-->
+     <div class="question">4.O QUE PODE ACONTECER COM A ENERGIA DO FUTURO?</div>
+     <div class="options">
+    <label><input type="radio" name="q4" value="O mundo usará cada vez mais mais energia renovável, solar e eólica."> A) O mundo usará cada vez mais mais energia renovável, solar e eólica.;</label>
+        <label><input type="radio" name="q4" value="Energias serão abandonadas"> B) Energias serão abandonadas.</label>
+        <label><input type="radio" name="q4" value="Usaremos energia gerada por pedalar de bike"> C) Usaremos energia gerada por pedalar de bike.</label>
+
+    </div>
+    <!-- Pergunta 5 -->
+    <div class="question">5. COMO AS ESCOLAS SERÃO FUTURAMENTE </div>
+    <div class="options">
+    <label><input type="radio" name="q5" value=" Irão abolir as escolas">A) Irão abolir as escolas.;</label>
+    <label><input type="radio" name="q5" value=" A educação será mais interativa com o auxilio da tecnologia">B) A educação será mais interativa com o auxilio da tecnologia;</label>
+    <label><input type="radio" name="q5" value="As escolas serão assumidos por robos"> C) As escolas serão assumidos por robos;</label>
+    </div>
+
+    <button type="button"
+    onclick="verificarRespostas()">Enviar</button>
+</form>
+<p id="result"></p>
+</div>
+
+<script>
+    function verificarRespostas() {
+let respostasCorretas = {
+q1: "Usaremos carro elétricos e autônomos.",
+q2: "A internet ficará mais rápida e acessível para todos.",
+q3: "Novos tratamentos e avanços.",
+q4: "O mundo usará cada vez mais mais energia renovável, solar e eólica",
+q5: "A educação será mais interativa com o auxilio da tecnologia",
+}
+ let pontuação = 0;
+
+ // Verifica respostas
+ let form = document.getElementById("quiz-form");
+let resposta1 = form.q1.value;
+let resposta2 = form.q2.value;
+let resposta3 = form.q3.value;
+let resposta4 = form.q4.value;
+let resposta5 = form.q5.value;
+if (resposta1 === respostasCorretas.q1) pontuacao++;
+if (resposta2 === respostasCorretas.q2) pontuacao++;
+if (resposta3 === respostasCorretas.q3) pontuacao++;
+if (resposta4 === respostasCorretas.q4) pontuacao++;
+if (resposta5 === respostasCorretas.q5) pontuacao++;
+ // Mostra resultado 
+ document.getElementById("result").innerText = document.getElementById("result").innerText = `Você acertou ${pontuacao} de 5 perguntas!`;
+}
+</script>
+</body>
+</html>
+
