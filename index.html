@@ -1,16 +1,65 @@
 <!DOCTYPE html>
-<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Simples com Imagem</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-
+scale=1.0">
+
+<title>Imagem com efeitos</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+text-align: center;
+margin: 20px;
+background-color: rgb(44, 98, 179);
+}
+h1 {
+color: #0c4375;
+font-size: 36px;
+}
+.container {
+display: flex;
+gap: 10px;
+justify-content: center;
+align-items: center;
+margin-top: 50px;
+}
+.card {
+transition: 0.5s;
+cursor: pointer;
+overflow: hidden;
+border-radius: 10px;
+}
+.card img {
+width: 200px; /* Largura fixa */
+height: 200px; /* Altura fixa */
+object-fit: cover; /* Garante que a imagem preencha sem
+
+distorcer */
+
+border-radius: 10px;
+transition: 0.5s;
+}
+.container:hover > .card:not(:hover) {
+opacity: 0.5;
+
+}
+.card:hover {
+transform: scale(1.1);
+}
+</style>
 </head>
 <body>
-    <div class="container">
-        <h1>Minha Imagem</h1>
-        <img src="/home/escola/Área de Trabalho/nath3AP/BACK-END/meus projetos/atv/chihuahua-cursos-cpt.jpg" alt="racas-de-cachorro-chihuahua (1).html" >
-
-    </div>
-</body>
-</html>
+<h1 style="text-align: center;">Efeitos em Imagens</h1>
+<p style="text-align: center;">Clique nas imagens para ver os
+efeitos!</p>
+<div class="container">
+<div class="card"><img src="/home/escola/Área de Trabalho/nath3AP/BACK-END/meus projetos/Efeito em imagens/imagens/imagem01.png" alt="imagem01.png"></div>
+<div class="card"><img src="/home/escola/Área de Trabalho/nath3AP/BACK-END/meus projetos/Efeito em imagens/imagens/imagem02.jpg" alt="Imagem 2"></div>
+<div class="card"><img src="/home/escola/Área de Trabalho/nath3AP/BACK-END/meus projetos/Efeito em imagens/imagens/imagem03.png" alt="Imagem 3"></div>
+<div class="card"><img src="/home/escola/Área de Trabalho/nath3AP/BACK-END/meus projetos/Efeito em imagens/imagens/imagem04.jpg" alt="Imagem 4"></div>
+<div class="card"><img src="/home/escola/Área de Trabalho/nath3AP/BACK-END/meus projetos/Efeito em imagens/imagens/images (5).jpeg" alt="imagem 5"></div>
+<div class="card"><img src="/home/escola/Área de Trabalho/nath3AP/BACK-END/meus projetos/Efeito em imagens/imagens/imagem06.jpg" alt="imagem 6"></div>
+<div class="card"><img src="/home/escola/Área de Trabalho/nath3AP/BACK-END/meus projetos/Efeito em imagens/imagens/imagem07.jpeg" alt="imagem 7"></div>
+<div class="card"><img src="/home/escola/Área de Trabalho/nath3AP/BACK-END/meus projetos/Efeito em imagens/imagens/imagem08.jpg" alt="imagem 8"></div>
+</div>
